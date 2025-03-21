@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sorting Algorithm Visualizer</h1>
+            <div class="theme-toggle">
+                <button id="theme-btn" title="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="controls-container">
+            <div class="control-group">
+                <label for="algorithm">Algorithm:</label>
+                <select id="algorithm">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="quick">Quick Sort</option>
+                    <option value="heap">Heap Sort</option>
+                    <option value="counting">Counting Sort</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="array-size">Array Size:</label>
+                <input type="range" id="array-size" min="5" max="50" value="20">
+                <span id="size-value">20</span>
+            </div>
+
+            <div class="control-group">
+                <label for="speed">Speed:</label>
+                <input type="range" id="speed" min="1" max="100" value="50">
+                <span id="speed-value">50 ms</span>
+            </div>
+
+            <div class="control-group buttons">
+                <button id="generate-btn" class="btn primary">Generate New Array</button>
+                <button id="sort-btn" class="btn success">Start Sorting</button>
+                <button id="pause-btn" class="btn warning" disabled>Pause</button>
+                <button id="reset-btn" class="btn danger" disabled>Reset</button>
+            </div>
+        </div>
+
+        <div class="visualization-container">
+            <div class="array-container" id="array-container"></div>
+            <div class="auxiliary-container" id="auxiliary-container"></div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <h3>Comparisons</h3>
+                <div id="comparisons">0</div>
+            </div>
+            <div class="stat-box">
+                <h3>Swaps</h3>
+                <div id="swaps">0</div>
+            </div>
+            <div class="stat-box">
+                <h3>Time Complexity</h3>
+                <div id="time-complexity">-</div>
+            </div>
+            <div class="stat-box">
+                <h3>Space Complexity</h3>
+                <div id="space-complexity">-</div>
+            </div>
+        </div>
+
+        <div class="algorithm-info">
+            <h2>Algorithm Information</h2>
+            <div id="algorithm-description"></div>
+        </div>
+
+        <div class="legend-container">
+            <div class="legend-item">
+                <div class="legend-color default"></div>
+                <span>Default</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color comparing"></div>
+                <span>Comparing</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color swapping"></div>
+                <span>Swapping</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color sorted"></div>
+                <span>Sorted</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color pivot"></div>
+                <span>Pivot</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Sorting Algorithm Visualizer &copy; 2025</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
