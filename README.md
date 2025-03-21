@@ -1,18 +1,18 @@
 ## Sorting Algorithm Visualizer
-
-- First create python virtual environment
--- ```bash
-    python3 -m venv venv
+### Setup Instructions 
+1. **Create a Python virtual environment**
+     ```bash
+       python3 -m venv venv
+     ```
+3. **Activate the virtual environment**
+     ```bash
+       source venv/bin/activate
+     ```
+5. **Install required dependencies**
+    ```bash
+       pip install -r requirements.txt
     ```
-- Enable virtual environment
--- ```bash
-    source venv/bin/activate
-    ```
-- Install required libraries
--- ```bash
-    pip install -r requirements.txt
-    ```
-- To run use this command
--- ```bash
-    uvicorn main:app
-    ```
+7. **Run the application**
+    ```bash
+       uvicorn main:app
+     ```
